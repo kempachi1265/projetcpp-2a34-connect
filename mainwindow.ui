@@ -6,395 +6,73 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>532</height>
+    <width>1100</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Content Creator Manager</string>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">
-QMainWindow {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-}
-QMainWindow[darkTheme=&quot;true&quot;] {
-    background-color: #000000;
-}
-QGroupBox {
-    background-color: #FFFFFF;
-    border: 2px solid #7D4FEE;
-    border-radius: 10px;
-    font: bold 14pt &quot;Arial&quot;;
-    color: #7D4FEE;
-    margin: 10px;
-}
-QGroupBox[darkTheme=&quot;true&quot;] {
-    background-color: #000000;
-    border: 2px solid #7D4FEE;
-    color: #7D4FEE;
-}
-QGroupBox::title {
-    color: #7D4FEE;
-    padding: 0 5px;
-    subcontrol-origin: margin;
-    subcontrol-position: top left;
-}
-QPushButton {
-    background-color: #7D4FEE;
-    color: #FFFFFF;
-    border-radius: 10px;
-    padding: 8px;
-    min-width: 100px;
-    font: 10pt &quot;Arial&quot;;
-    border: 2px solid #7D4FEE;
-}
-QPushButton:hover {
-    background-color: #FFFFFF;
-    color: #7D4FEE;
-    border: 2px solid #7D4FEE;
-}
-QLineEdit, QComboBox, QSpinBox {
-    background-color: #FFFFFF;
-    border: 2px solid #7D4FEE;
-    border-radius: 10px;
-    padding: 6px;
-    font: 10pt &quot;Arial&quot;;
-    color: #7D4FEE;
-}
-QLineEdit[darkTheme=&quot;true&quot;], QComboBox[darkTheme=&quot;true&quot;], QSpinBox[darkTheme=&quot;true&quot;] {
-    background-color: #000000;
-    border: 2px solid #7D4FEE;
-    color: #7D4FEE;
-}
-QTableWidget {
-    background-color: #FFFFFF;
-    border: 2px solid #7D4FEE;
-    border-radius: 10px;
-    gridline-color: #7D4FEE;
-    font: 10pt &quot;Arial&quot;;
-    color: #7D4FEE;
-}
-QTableWidget[darkTheme=&quot;true&quot;] {
-    background-color: #1A1A1A;
-    border: 2px solid #7D4FEE;
-    color: #7D4FEE;
-}
-QTableWidget::item:selected {
-    background-color: #7D4FEE;
-    color: #FFFFFF;
-}
-QLabel {
-    color: #7D4FEE;
-    font: 10pt &quot;Arial&quot;;
-}
-QLabel[darkTheme=&quot;true&quot;] {
-    color: #7D4FEE;
-}
-QWidget#sidebar {
-    background-color: #7D4FEE;
-    border-radius: 10px 0 0 10px;
-}
-QPushButton#sidebarButton {
-    background-color: #7D4FEE;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    font: 10pt &quot;Arial&quot;;
-    width: 100%;
-    text-align: left;
-}
-QPushButton#sidebarButton:hover {
-    background-color: #FFFFFF;
-    color: #7D4FEE;
-}
-   </string>
+   <string>Project Manager</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="mainLayout">
+    <!-- ================= MENU LATERAL ================= -->
     <item>
-     <layout class="QVBoxLayout" name="sidebarLayout">
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Management</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Finance</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Content Creator</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Sponsor</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Deal</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sidebarButton">
-        <property name="text">
-         <string>Employee</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Orientation::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Policy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
+     <widget class="QFrame" name="menuFrame">
+      <layout class="QVBoxLayout" name="menuLayout">
+       <item>
+        <widget class="QPushButton" name="btnManagement">
+         <property name="text">
+          <string>Management</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnFinance">
+         <property name="text">
+          <string>Finance</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnContentCreator">
+         <property name="text">
+          <string>Content Creator</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSponsor">
+         <property name="text">
+          <string>Sponsor</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDeal">
+         <property name="text">
+          <string>Deal</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnEmployee">
+         <property name="text">
+          <string>Employee</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
+
+    <!-- ================= CONTENU (STACKED WIDGET) ================= -->
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="contentCreatorPage">
-       <layout class="QVBoxLayout" name="contentCreatorLayout">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QLabel" name="label_search">
-            <property name="text">
-             <string>Search:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="searchEdit">
-            <property name="placeholderText">
-             <string>Search by name or platform</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="themeButton">
-            <property name="text">
-             <string>Dark Theme</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="exportButton">
-            <property name="text">
-             <string>Export to CSV</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox">
-          <property name="title">
-           <string>Manage Content Creators</string>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <layout class="QGridLayout" name="gridLayout_2">
-             <item row="5" column="1">
-              <widget class="QPushButton" name="updateButton">
-               <property name="text">
-                <string>Edit</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="2">
-              <widget class="QPushButton" name="deleteButton">
-               <property name="text">
-                <string>Delete</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1" colspan="2">
-              <widget class="QLineEdit" name="nameEdit"/>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>Content Type:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QPushButton" name="addButton">
-               <property name="text">
-                <string>Add</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>Platform:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1" colspan="2">
-              <widget class="QComboBox" name="platformCombo">
-               <item>
-                <property name="text">
-                 <string>YouTube</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Twitch</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Kick</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Instagram</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>TikTok</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Facebook</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>Name:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>Subscribers:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0" colspan="3">
-              <widget class="QLabel" name="titleLabel">
-               <property name="text">
-                <string>Content Creator Details</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="0" colspan="3">
-              <widget class="QPushButton" name="clearButton">
-               <property name="text">
-                <string>Clear Form</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1" colspan="2">
-              <widget class="QSpinBox" name="subscribersSpin">
-               <property name="minimum">
-                <number>100</number>
-               </property>
-               <property name="maximum">
-                <number>1000000000</number>
-               </property>
-               <property name="singleStep">
-                <number>100</number>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1" colspan="2">
-              <widget class="QLineEdit" name="contentTypeEdit"/>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTableWidget" name="creatorTable">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <column>
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Platform</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Subscribers</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Content Type</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+
+      <!-- Management Page -->
       <widget class="QWidget" name="managementPage">
        <layout class="QVBoxLayout" name="managementLayout">
         <item>
@@ -403,26 +81,155 @@ QPushButton#sidebarButton:hover {
            <string>Management Page</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
+
+      <!-- ================== Finance Page ================== -->
       <widget class="QWidget" name="financePage">
        <layout class="QVBoxLayout" name="financeLayout">
         <item>
-         <widget class="QLabel" name="financeLabel">
+         <layout class="QHBoxLayout" name="topBar">
+          <item>
+           <widget class="QLineEdit" name="searchBox">
+            <property name="placeholderText">
+             <string>Search...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSearchById">
+            <property name="text">
+             <string>Rechercher</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDarkTheme">
+            <property name="text">
+             <string>Dark Theme</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSortByMontant">
+            <property name="text">
+             <string>Trier par Montant</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnExportCSV">
+            <property name="text">
+             <string>Export to CSV</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="formBox">
+          <property name="title">
+           <string>Manage Finance - Factures</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelId">
+             <property name="text">
+              <string>ID Facture :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineId"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelMontant">
+             <property name="text">
+              <string>Montant :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineMontant"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelDateEmission">
+             <property name="text">
+              <string>Date émission :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDateEdit" name="dateEmission"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelDateEcheance">
+             <property name="text">
+              <string>Date échéance :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDateEdit" name="dateEcheance"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="labelStatut">
+             <property name="text">
+              <string>Statut :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QComboBox" name="comboStatut">
+             <item><property name="text"><string>Payée</string></property></item>
+             <item><property name="text"><string>En attente</string></property></item>
+             <item><property name="text"><string>Annulée</string></property></item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="actionLayout">
+          <item><widget class="QPushButton" name="btnAdd"><property name="text"><string>Add</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnEdit"><property name="text"><string>Edit</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnDelete"><property name="text"><string>Delete</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnClear"><property name="text"><string>Clear Form</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableFactures">
+          <column><property name="text"><string>ID Facture</string></property></column>
+          <column><property name="text"><string>Montant</string></property></column>
+          <column><property name="text"><string>Date émission</string></property></column>
+          <column><property name="text"><string>Date échéance</string></property></column>
+          <column><property name="text"><string>Statut</string></property></column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- Content Creator Page -->
+      <widget class="QWidget" name="contentCreatorPage">
+       <layout class="QVBoxLayout" name="contentCreatorLayout">
+        <item>
+         <widget class="QLabel" name="labelContent">
           <property name="text">
-           <string>Finance Page</string>
+           <string>Content Creator Page</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
+
+      <!-- Sponsor Page -->
       <widget class="QWidget" name="sponsorPage">
        <layout class="QVBoxLayout" name="sponsorLayout">
         <item>
@@ -431,26 +238,14 @@ QPushButton#sidebarButton:hover {
            <string>Sponsor Page</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="dealPage">
-       <layout class="QVBoxLayout" name="dealLayout">
-        <item>
-         <widget class="QLabel" name="dealLabel">
-          <property name="text">
-           <string>Deal Page</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+
+      <!-- Employee Page -->
       <widget class="QWidget" name="employeePage">
        <layout class="QVBoxLayout" name="employeeLayout">
         <item>
@@ -459,12 +254,13 @@ QPushButton#sidebarButton:hover {
            <string>Employee Page</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
+
      </widget>
     </item>
    </layout>

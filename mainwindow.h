@@ -2,24 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QTableWidget>
-#include <QLineEdit>
-#include <QComboBox>
-#include <QSpinBox>
-#include <QPushButton>
-#include <QList>
-#include <QStackedWidget>
+#include <QTableWidgetItem>
+#include <QDate>
 
-    QT_BEGIN_NAMESPACE
+QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
-struct Creator {
-    QString name;
-    QString platform;
-    int subscribers;
-    QString contentType;
-};
 
 class MainWindow : public QMainWindow
 {
@@ -30,42 +18,26 @@ public:
     ~MainWindow();
 
 private slots:
-    void handleAddButtonClicked();
-    void handleUpdateButtonClicked();
-    void handleDeleteButtonClicked();
-    void handleTableRowSelected(int row, int column);
-    void handleSearchTextChanged(const QString &text);
-    void handleExportButtonClicked();
-    void handleThemeButtonClicked();
-    void handleClearButtonClicked();
+    // Menu
+    void showManagementPage();
+    void showFinancePage();
+    void showContentCreatorPage();
+    void showSponsorPage();
+    void showEmployeePage();
+
+    // Finance Page
+    void addFacture();
+    void editFacture();
+    void deleteFacture();
+    void clearForm();
+    void sortByMontant();
+    void searchById();
 
 private:
-    void updateTable();
-    bool isNameUnique(const QString &name, const QString &oldName = "");
-
     Ui::MainWindow *ui;
-    QLineEdit *nameEdit;
-    QComboBox *platformCombo;
-    QSpinBox *subscribersSpin;
-    QLineEdit *contentTypeEdit;
-    QLineEdit *searchEdit;
-    QPushButton *addButton;
-    QPushButton *updateButton;
-    QPushButton *deleteButton;
-    QPushButton *themeButton;
-    QPushButton *exportButton;
-    QPushButton *clearButton;
-    QTableWidget *creatorTable;
-    QStackedWidget *stackedWidget;
-    QPushButton *managementButton;
-    QPushButton *financeButton;
-    QPushButton *contentCreatorButton;
-    QPushButton *sponsorButton;
-    QPushButton *dealButton;
-    QPushButton *employeeButton;
-    QList<Creator> creators;
-    int selectedRow;
-    bool darkTheme;
+
+    // Helper function pour ajouter une facture au tableau
+    void insertFactureInTable(QString id, double montant, QDate dateEmission, QDate dateEcheance, QString statut);
 };
 
-#endif
+#endif // MAINWINDOW_H

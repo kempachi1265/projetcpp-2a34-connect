@@ -1,0 +1,21 @@
+# ninja log v6
+11	980	7807774385552913	A1_autogen/timestamp	e5dd78644e9bd1bf
+11	980	7807774385552913	A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+11	980	7807774385552913	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/timestamp	e5dd78644e9bd1bf
+11	980	7807774385552913	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+989	4125	7807774387112276	CMakeFiles/A1.dir/A1_autogen/mocs_compilation.cpp.obj	19df3edb533e361c
+996	4141	7807774387182385	CMakeFiles/A1.dir/main.cpp.obj	e371312b82a6d067
+1002	4532	7807774387242069	CMakeFiles/A1.dir/mainwindow.cpp.obj	a6c4b0b1f9b5a5bc
+4538	4819	7807774422597865	A1.exe	9b60d88a43c83cbf
+59	376	7807792884073404	A1_autogen/timestamp	e5dd78644e9bd1bf
+59	376	7807792884073404	A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+59	376	7807792884073404	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/timestamp	e5dd78644e9bd1bf
+59	376	7807792884073404	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+378	3868	7807792887254946	CMakeFiles/A1.dir/mainwindow.cpp.obj	a6c4b0b1f9b5a5bc
+3869	4159	7807792922167497	A1.exe	9b60d88a43c83cbf
+20	265	7807796933267574	A1_autogen/timestamp	e5dd78644e9bd1bf
+20	265	7807796933267574	A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+20	265	7807796933267574	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/timestamp	e5dd78644e9bd1bf
+20	265	7807796933267574	C:/Users/midou/Documents/A1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/A1_autogen/mocs_compilation.cpp	e5dd78644e9bd1bf
+266	3838	7807796935719576	CMakeFiles/A1.dir/mainwindow.cpp.obj	a6c4b0b1f9b5a5bc
+3838	4120	7807796971443454	A1.exe	9b60d88a43c83cbf
